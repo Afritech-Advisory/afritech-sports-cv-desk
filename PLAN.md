@@ -21,9 +21,9 @@ One folder per player, named with a slug: lowercase first and last name joined b
 
 | File | What it is |
 |---|---|
-| `<slug>/index.html` | v3 tabbed customer profile (club, agent and player-and-family views) |
-| `<slug>/public.html` | Public page with share card |
-| `<slug>/card.png` | 1080×1350 player card; also the share-card image for `public.html` |
+| `<slug>/index.html` | v3 tabbed public profile (club, agent and player-and-family views) |
+| `<slug>/share.png` | 1200×630 share card, used as the link preview (og:image) |
+| `<slug>/card.png` | 1080×1350 player card |
 | `<slug>/cv.html` | Player CV as a web page, opening on the CV cover |
 | `<slug>/cv.pdf` | Same CV as a PDF, built from `Afritech_Dossier_Front_Page_and_CV_Cover_Template.docx` |
 
@@ -79,10 +79,14 @@ Banned: phone numbers, WhatsApp links or QR codes, and `tel:` links.
 - Phone numbers and WhatsApp.
 
 ## 11. Open flags
+_Correction (2026-11-03): an earlier draft listed a separate `public.html`. The v3 skill makes the tabbed profile itself the public page, with a separate 1200×630 share card, so the five files are now index, share card, player card, CV page and CV PDF._
+
 1. **Phone numbers are public now.** Two numbers and a WhatsApp link are live in Player-Scouting-Forms `players/` today. They disappear at done-item 5. Andrew may want them removed sooner.
-2. **The `/dashboard` skill needs updating on claude.ai:** add the commit step, use the cv-desk folder layout, and drop phone/WhatsApp contacts. This can't be done from the repo.
+2. **The `/dashboard` skill:** v3.1 was written on 2026-11-03 with the commit step, the cv-desk layout and email/LinkedIn-only contacts. It goes live once Andrew uploads it on claude.ai (Customize > Skills).
 3. **Missing files:** Seb Fisher has only the profile today, and needs the public page, card, CV page and CV PDF. Bajaber needs all five. Each needs the Afritech logo and a verified player photo supplied before building.
 4. **Photo and image rights:** player photos become public. Confirm Afritech may publish each one.
-5. **How "signed" looks is not yet designed:** what the profile and index show for a signed player (e.g. a "Signed with <club>, <month year>" line, and whether signed players sit in a separate index section). Proposed default: one line under the player's name, same index list. Andrew to confirm.
+5. **How "signed" looks is not yet confirmed:** the skill (v3.1) uses one line, "Signed with <club>, <month year>", under the name and in the same index list. Andrew to confirm.
+8. **"Book a call" with no phone:** the skill (v3.1) makes these buttons email links to Advisory@afritechsports.com. Andrew to confirm, or name a booking page.
+9. **CTA orange:** the dashboard skill uses #E8701A, while the other skills use #F97316. Unresolved; v3.1 leaves it as it was.
 6. **Under-18 risk:** the case-by-case rule leaves no written record of consent. That is Andrew's decision; noted here only so it is visible.
 7. **Making the repo public** exposes its history too. It currently holds only the initial commit, so nothing is at risk today.
