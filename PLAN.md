@@ -34,7 +34,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 | Español (LATAM) | `player-eslatam.html` | `scout-eslatam.html` |
 
   Base address: `https://afritech-advisory.github.io/Player-Scouting-Forms/`
-- **Drafts:** the forms save answers on the phone as people type and restore them on reopening, with a "Clear saved answers" button (restored 2026-11-03 on the working branch; live once merged to `main`).
+- **Drafts:** the forms save answers on the phone as people type and restore them on reopening, with a "Clear saved answers" button (restored and live 2026-11-03).
 - **Sending:** in the form, Review, then Save as PDF, then email the PDF to Advisory@afritechsports.com.
 - **Standard:** the forms must keep everything in the v4.2 Player / Parent form Andrew supplied: all sections, repeatable entries, a progress percentage, Review, Copy text, Save as PDF, and readable without scripts.
 - **Approval wording:** pages say Afritech Sports reviews and approves, never a named person.
@@ -61,7 +61,9 @@ No one filling in a form needs a claude.ai account or any sign-in.
 - The contact block names Afritech Sports Technology and Innovation Group Limited, Advisory Services, Nairobi, Kenya. No personal name (ruling 2026-11-03).
 - Email: Advisory@afritechsports.com
 - Phone: Kenya +254 715 551 506 only. The US number is never used (ruling 2026-11-03).
+- WhatsApp: "Chat with Afritech on WhatsApp" button (stays, ruling 2026-11-03).
 - LinkedIn, Afritech: https://www.linkedin.com/company/afritech-sports-technology-and-innovation-group-limited/
+- LinkedIn, Andrew Rukidi: https://www.linkedin.com/in/andrew-r-b1b514 (stays, ruling 2026-11-03), as a link only.
 - Never: any other phone number or `tel:` links.
 
 ## 6. Edge cases
@@ -90,9 +92,9 @@ No one filling in a form needs a claude.ai account or any sign-in.
 ## 9. Open flags
 _Resolved 2026-11-03: draft saving restored in all 8 forms (on the working branch); phone tap-test passed; CV Desk translations accepted for now; contact blocks are Afritech-only; only the Kenyan number remains._
 
-1. **Merge to `main`.** Draft saving and the Afritech-only profile contacts are on branch `claude/dreaming-pass-projects-rxyirh` of Player-Scouting-Forms. The live forms the CV Desk links to update only once that branch is merged into `main`. After the merge, change the CV Desk's step 1 from "finish in one sitting" to "your answers are saved on this phone".
-2. **WhatsApp button:** the Seb Fisher and Bajaber profiles still carry "Chat with Afritech on WhatsApp". Confirm whether it stays and that it reaches the Kenyan number.
-3. **Personal LinkedIn:** with contact blocks Afritech-only, the dashboard skill now lists only the Afritech LinkedIn page. Restore Andrew's personal LinkedIn if wanted.
+1. ~~**Merge to `main`.**~~ Done 2026-11-03 (Player-Scouting-Forms PR #1); CV Desk step 1 updated. Original note: Draft saving and the Afritech-only profile contacts are on branch `claude/dreaming-pass-projects-rxyirh` of Player-Scouting-Forms. The live forms the CV Desk links to update only once that branch is merged into `main`. After the merge, change the CV Desk's step 1 from "finish in one sitting" to "your answers are saved on this phone".
+2. ~~**WhatsApp button:**~~ Stays (ruling 2026-11-03). Original note: the Seb Fisher and Bajaber profiles still carry "Chat with Afritech on WhatsApp". Confirm whether it stays and that it reaches the Kenyan number.
+3. ~~**Personal LinkedIn:**~~ Stays (ruling 2026-11-03). Original note: with contact blocks Afritech-only, the dashboard skill now lists only the Afritech LinkedIn page. Restore Andrew's personal LinkedIn if wanted.
 4. **Phone fields inside the forms.** The forms ask for the respondent's and guardian's phone or WhatsApp. Confirm this is fine for intake.
 5. **Missing files and assets:** Seb Fisher needs the share card, player card, CV page and CV PDF; Bajaber needs all five. Each needs the Afritech logo and a verified player photo, and confirmation that Afritech may publish each photo.
 6. **"Signed" display and "Book a call" by email** (dashboard skill v3.1) are proposed defaults, not yet confirmed.
