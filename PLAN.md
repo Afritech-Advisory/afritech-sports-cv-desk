@@ -1,92 +1,98 @@
-# afritech-sports-cv-desk: version 1 plan
+# Afritech Sports Player CV Desk: version 1 plan
 
-_Written 2026-11-03 from a question-and-answer session with Andrew Rukidi. No code has been written yet._
+_Rewritten 2026-11-03. Replaces the earlier draft, which covered only publishing and missed the intake desk._
 
-## 1. Goal
-cv-desk is the single public home for Afritech player CVs. It takes over from
-the `players/` folder in Player-Scouting-Forms. In order, it is:
-1. a publishing site (version 1),
-2. a place `/dashboard` output is committed to without hand-assembly (version 1, in Claude Code only),
-3. later steps that follow from these. Nothing beyond 1 and 2 is in version 1.
+## 1. What the CV Desk is
+One path from "here is a player" to "here is a live Player CV":
+
+1. **Intake.** A player, parent, scout, coach or agent opens the CV Desk link, picks a language and their role, and fills in the full Afritech form.
+2. **Send.** They save the form as a PDF and email it to Advisory@afritechsports.com.
+3. **Review.** Afritech Sports reviews every form. Nothing is shared with a club, agent or family until Afritech approves it.
+4. **Build.** Afritech runs `/dashboard` (afritech-scouting-dashboard v3.1) on the dossier to make the profile, share card, player card and CV.
+5. **Publish.** The files go live in this repo on GitHub Pages.
 
 ## 2. Who uses it
-- Club scouts and recruiters, mostly on a phone.
-- Agents.
-- Players and their families.
-- Andrew, who publishes.
+| Person | Uses | Form |
+|---|---|---|
+| Player, or parent/guardian for under-18s | Intake | Player Scouting & Career Profile Form (20 sections) |
+| Scout, coach, recruitment analyst, FIFA-licensed agent | Intake | Player Recruitment & Market Intelligence Form (19 sections). Scouts and coaches use the same form |
+| Afritech Sports | Review, build, publish | — |
+| Clubs, agents, families | Read the published CV, mostly on a phone | — |
 
-## 3. What each player gets
-One folder per player, named with a slug: lowercase first and last name joined by a hyphen, ASCII only
-(`seb-fisher`, `mohammed-bajaber`).
+No one filling in a form needs a claude.ai account or any sign-in.
+
+## 3. Intake (live since 2026-11-03)
+- **Front door:** claude.ai artifact "Afritech Sports Player CV Desk", https://claude.ai/artifact/K5uuVkDWXfTQ5P6xEoiEtd, shared as anyone with the link. It has no database or sign-in features.
+- **Languages:** English, Français, Português (BR), Español (LATAM). The page picks the phone's language and has a switch at the top. It works with scripts off (English shown).
+- **Forms:** the two buttons open the existing v5.0 forms from Player-Scouting-Forms on GitHub Pages:
+
+| Language | Player / parent | Scout / coach / agent |
+|---|---|---|
+| English | `player.html` | `scout.html` |
+| Français | `player-fr.html` | `scout-fr.html` |
+| Português (BR) | `player-ptbr.html` | `scout-ptbr.html` |
+| Español (LATAM) | `player-eslatam.html` | `scout-eslatam.html` |
+
+  Base address: `https://afritech-advisory.github.io/Player-Scouting-Forms/`
+- **Sending:** in the form, Review, then Save as PDF, then email the PDF to Advisory@afritechsports.com.
+- **Standard:** the forms must keep everything in the v4.2 Player / Parent form Andrew supplied: all sections, repeatable entries, a progress percentage, Review, Copy text, Save as PDF, and readable without scripts.
+- **Approval wording:** pages say Afritech Sports reviews and approves, never a named person.
+
+## 4. Publishing (this repo)
+- The repo becomes **public** and is served by GitHub Pages from `main`, root folder, at `https://afritech-advisory.github.io/afritech-sports-cv-desk/`. No custom domain.
+- One folder per player, named with a slug: lowercase first and last name, hyphenated, ASCII only (`seb-fisher`, `mohammed-bajaber`).
 
 | File | What it is |
 |---|---|
-| `<slug>/index.html` | v3 tabbed public profile (club, agent and player-and-family views) |
-| `<slug>/share.png` | 1200×630 share card, used as the link preview (og:image) |
+| `<slug>/index.html` | Tabbed public profile (club, agent and player-and-family views) |
+| `<slug>/share.png` | 1200×630 share card, used as the link preview |
 | `<slug>/card.png` | 1080×1350 player card |
 | `<slug>/cv.html` | Player CV as a web page, opening on the CV cover |
-| `<slug>/cv.pdf` | Same CV as a PDF, built from `Afritech_Dossier_Front_Page_and_CV_Cover_Template.docx` |
+| `<slug>/cv.pdf` | Same CV as PDF, built on `Afritech_Dossier_Front_Page_and_CV_Cover_Template.docx` |
 
-At the repo root, `index.html` lists every player and links to each profile.
+- The root `index.html` lists every live player and links to each profile.
+- Everything here is public. Customer-safe material only: internal decision files, risk notes, price limits and internal method names never go in this repo.
+- English only for published CVs.
+- Pages work fully with scripts off. A small optional script is allowed only if the page works without it.
+- **Publishing route:** from Claude Code, `/dashboard` commits after Afritech approves. From Claude chat on a phone, upload by hand using the checklist in the dashboard skill. File names never contain spaces or "(1)".
 
-All of these files are public: anyone with the address may read any of them.
-
-## 4. Hosting
-- The repo is made **public** (it is private today) and served with GitHub Pages from `main`, root folder.
-- Address: `https://afritech-advisory.github.io/afritech-sports-cv-desk/`
-- No custom domain.
-
-## 5. Contact details (every page)
-Allowed, and nothing else:
+## 5. Contact details (every page, form front door and CV)
 - Email: Advisory@afritechsports.com
 - LinkedIn, Afritech: https://www.linkedin.com/company/afritech-sports-technology-and-innovation-group-limited/
-- LinkedIn, Andrew: https://www.linkedin.com/in/andrew-r-b1b514 (tracking parameters removed from the link Andrew supplied)
+- LinkedIn, Andrew Rukidi: https://www.linkedin.com/in/andrew-r-b1b514
+- Never: phone numbers, WhatsApp links or QR codes, or `tel:` links on published pages.
 
-Banned: phone numbers, WhatsApp links or QR codes, and `tel:` links.
+## 6. Edge cases
+- **Player signs elsewhere or stops working with Afritech:** the profile stays up as track record, with "Signed with <club>, <month year>". If the player or family asks for removal, delete the folder and the index entry in one commit.
+- **Under-18s:** Afritech decides case by case before building. No rule applies where the details are already public.
+- **The person forgets to attach the PDF:** Afritech receives nothing usable and replies asking for it.
+- **The person closes the form before saving:** their answers are lost (see flag 1).
+- **Links already sent:** the CV Desk link has been shared and stays the same. No links to `player-scouting-forms/players/` were sent, so those pages can simply be deleted.
 
-## 6. Publishing a player
-- **From Claude Code:** at the end of `/dashboard`, Claude shows the files and, once Andrew approves, commits them to `<slug>/`, updates `index.html`, and pushes.
-- **From Claude chat (phone):** Andrew uploads by hand using `PUBLISHING.md`, a checklist to be written as part of version 1: the folder name, the five exact file names, updating the index, and the checks in section 9.
-- File names never contain spaces or browser-added suffixes such as `(1)`.
+## 7. Definition of done (version 1)
+1. The CV Desk opens both forms in all four languages on a phone, with no sign-in. **Done 2026-11-03**, except a live tap-test of the links on a phone.
+2. `seb-fisher/` and `mohammed-bajaber/` each hold all five files in section 4. Bajaber is rebuilt to the v3 tabbed template first.
+3. The root `index.html` lists both players with only the section 5 contacts.
+4. Every published page loads on the GitHub Pages address at 390px wide with scripts off.
+5. A search of this repo finds no phone numbers, `wa.me`, `whatsapp` or `tel:`, and no file names with spaces or `(1)`.
+6. `players/` is deleted from Player-Scouting-Forms.
+7. `/dashboard` v3.1 is uploaded on claude.ai and can commit to this repo from Claude Code.
 
-## 7. Rules on content
-- Customer-safe material only. Internal decision files, risk notes, price limits and internal method names never go in this repo.
-- English only.
-- Pages work fully with JavaScript turned off. A small optional script is allowed only if the page works without it (as on the Seb Fisher pilot).
-- Phone-first: check at 390px wide.
+## 8. Not in version 1
+- Any sign-in, database, inbox or progress tracking on the CV Desk.
+- A service that stores form submissions (Formspree, Google Forms or similar).
+- Building CVs automatically from a submitted PDF. Afritech runs `/dashboard`.
+- Changes to the form questions.
+- Visitor analytics, a custom domain, or published CVs in languages other than English.
 
-## 8. Edge cases
-- **Player signs elsewhere or stops working with Afritech:** the profile stays up, showing the new club, as Afritech track record. If the player or family asks for removal, delete the player's folder and their index entry; the address then returns "not found".
-- **Players under 18:** decided case by case by Andrew. No rule applies when the player's details are already public.
-- **Links already sent out:** none exist for the current `players/` pages, so no redirects are needed.
-
-## 9. Definition of done (version 1)
-1. `seb-fisher/` and `mohammed-bajaber/` each contain all five files in section 3. Bajaber is rebuilt to the v3 tabbed template first.
-2. The root `index.html` lists both players and carries only the section 5 contacts.
-3. Every page loads at the GitHub Pages address on a phone at 390px wide, with JavaScript off.
-4. A search of the repo finds no phone numbers, `wa.me`, `whatsapp` or `tel:`, and no file names with spaces or `(1)`.
-5. `players/` (including `index (1).html`) is deleted from Player-Scouting-Forms.
-6. `PUBLISHING.md` exists, and `/dashboard` can commit to cv-desk from Claude Code.
-
-## 10. Not in version 1
-- Intake or submission forms, and stage tracking (those stay in Player-Scouting-Forms).
-- Internal decision files.
-- Logins, passwords or private links.
-- A custom domain.
-- Visitor analytics or tracking.
-- Languages other than English.
-- Building pages automatically from a dossier. `/dashboard` builds them; cv-desk only stores and serves them.
-- Phone numbers and WhatsApp.
-
-## 11. Open flags
-_Correction (2026-11-03): an earlier draft listed a separate `public.html`. The v3 skill makes the tabbed profile itself the public page, with a separate 1200×630 share card, so the five files are now index, share card, player card, CV page and CV PDF._
-
-1. **Phone numbers are public now.** Two numbers and a WhatsApp link are live in Player-Scouting-Forms `players/` today. They disappear at done-item 5. Andrew may want them removed sooner.
-2. **The `/dashboard` skill:** v3.1 was written on 2026-11-03 with the commit step, the cv-desk layout and email/LinkedIn-only contacts. It goes live once Andrew uploads it on claude.ai (Customize > Skills).
-3. **Missing files:** Seb Fisher has only the profile today, and needs the public page, card, CV page and CV PDF. Bajaber needs all five. Each needs the Afritech logo and a verified player photo supplied before building.
-4. **Photo and image rights:** player photos become public. Confirm Afritech may publish each one.
-5. **How "signed" looks is not yet confirmed:** the skill (v3.1) uses one line, "Signed with <club>, <month year>", under the name and in the same index list. Andrew to confirm.
-8. **"Book a call" with no phone:** the skill (v3.1) makes these buttons email links to Advisory@afritechsports.com. Andrew to confirm, or name a booking page.
-9. **CTA orange:** the dashboard skill uses #E8701A, while the other skills use #F97316. Unresolved; v3.1 leaves it as it was.
-6. **Under-18 risk:** the case-by-case rule leaves no written record of consent. That is Andrew's decision; noted here only so it is visible.
-7. **Making the repo public** exposes its history too. It currently holds only the initial commit, so nothing is at risk today.
+## 9. Open flags
+1. **Draft saving lost in v5.0.** The v4.2 standard saved a draft on the phone, and the v5.0 forms don't. Until it's restored, the CV Desk tells people to finish in one sitting. Restore in all 8 forms.
+2. **Phone tap-test.** The CV Desk links couldn't be opened from the build environment. Confirm one link per language on a phone.
+3. **CV Desk page translations** (FR, PT-BR, ES-LATAM) were written by Claude and need a native-speaker check. The forms use Afritech's existing translations.
+4. **Phone fields inside the forms.** The forms ask for the respondent's and guardian's phone or WhatsApp. The no-phone rule covers published pages; confirm it doesn't apply to intake.
+5. **Andrew's name on published profiles.** It appears in the contact block of the Seb Fisher and Bajaber pages (Director of Advisory Services). Approval wording is Afritech; confirm whether the contact block also becomes Afritech-only.
+6. **The phone numbers are public now.** Two numbers and a WhatsApp link are live in Player-Scouting-Forms `players/` until done-item 6.
+7. **Missing files and assets:** Seb Fisher needs the share card, player card, CV page and CV PDF; Bajaber needs all five. Each needs the Afritech logo and a verified player photo, and confirmation that Afritech may publish each photo.
+8. **"Signed" display and "Book a call" by email** (dashboard skill v3.1) are proposed defaults, not yet confirmed.
+9. **CTA orange:** #E8701A (dashboard skill, CV Desk) vs #F97316 (other skills). Unresolved.
+10. **Making this repo public** exposes its history, which currently holds only this plan and the initial commit.
