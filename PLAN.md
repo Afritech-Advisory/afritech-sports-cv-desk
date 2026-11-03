@@ -34,6 +34,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 | Español (LATAM) | `player-eslatam.html` | `scout-eslatam.html` |
 
   Base address: `https://afritech-advisory.github.io/Player-Scouting-Forms/`
+- **Drafts:** the forms save answers on the phone as people type and restore them on reopening, with a "Clear saved answers" button (restored 2026-11-03 on the working branch; live once merged to `main`).
 - **Sending:** in the form, Review, then Save as PDF, then email the PDF to Advisory@afritechsports.com.
 - **Standard:** the forms must keep everything in the v4.2 Player / Parent form Andrew supplied: all sections, repeatable entries, a progress percentage, Review, Copy text, Save as PDF, and readable without scripts.
 - **Approval wording:** pages say Afritech Sports reviews and approves, never a named person.
@@ -57,16 +58,17 @@ No one filling in a form needs a claude.ai account or any sign-in.
 - **Publishing route:** from Claude Code, `/dashboard` commits after Afritech approves. From Claude chat on a phone, upload by hand using the checklist in the dashboard skill. File names never contain spaces or "(1)".
 
 ## 5. Contact details (every page, form front door and CV)
+- The contact block names Afritech Sports Technology and Innovation Group Limited, Advisory Services, Nairobi, Kenya. No personal name (ruling 2026-11-03).
 - Email: Advisory@afritechsports.com
+- Phone: Kenya +254 715 551 506 only. The US number is never used (ruling 2026-11-03).
 - LinkedIn, Afritech: https://www.linkedin.com/company/afritech-sports-technology-and-innovation-group-limited/
-- LinkedIn, Andrew Rukidi: https://www.linkedin.com/in/andrew-r-b1b514
-- Never: phone numbers, WhatsApp links or QR codes, or `tel:` links on published pages.
+- Never: any other phone number or `tel:` links.
 
 ## 6. Edge cases
 - **Player signs elsewhere or stops working with Afritech:** the profile stays up as track record, with "Signed with <club>, <month year>". If the player or family asks for removal, delete the folder and the index entry in one commit.
 - **Under-18s:** Afritech decides case by case before building. No rule applies where the details are already public.
 - **The person forgets to attach the PDF:** Afritech receives nothing usable and replies asking for it.
-- **The person closes the form before saving:** their answers are lost (see flag 1).
+- **The person closes the form before saving:** once the draft-saving change is live, their answers come back when they reopen the form on the same phone. A different phone or a cleared browser starts empty.
 - **Links already sent:** the CV Desk link has been shared and stays the same. No links to `player-scouting-forms/players/` were sent, so those pages can simply be deleted.
 
 ## 7. Definition of done (version 1)
@@ -74,7 +76,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 2. `seb-fisher/` and `mohammed-bajaber/` each hold all five files in section 4. Bajaber is rebuilt to the v3 tabbed template first.
 3. The root `index.html` lists both players with only the section 5 contacts.
 4. Every published page loads on the GitHub Pages address at 390px wide with scripts off.
-5. A search of this repo finds no phone numbers, `wa.me`, `whatsapp` or `tel:`, and no file names with spaces or `(1)`.
+5. A search of this repo finds no phone number other than +254 715 551 506, no `tel:` and no personal name in a contact block, and no file names with spaces or `(1)`.
 6. `players/` is deleted from Player-Scouting-Forms.
 7. `/dashboard` v3.1 is uploaded on claude.ai and can commit to this repo from Claude Code.
 
@@ -86,13 +88,14 @@ No one filling in a form needs a claude.ai account or any sign-in.
 - Visitor analytics, a custom domain, or published CVs in languages other than English.
 
 ## 9. Open flags
-1. **Draft saving lost in v5.0.** The v4.2 standard saved a draft on the phone, and the v5.0 forms don't. Until it's restored, the CV Desk tells people to finish in one sitting. Restore in all 8 forms.
-2. **Phone tap-test.** The CV Desk links couldn't be opened from the build environment. Confirm one link per language on a phone.
-3. **CV Desk page translations** (FR, PT-BR, ES-LATAM) were written by Claude and need a native-speaker check. The forms use Afritech's existing translations.
-4. **Phone fields inside the forms.** The forms ask for the respondent's and guardian's phone or WhatsApp. The no-phone rule covers published pages; confirm it doesn't apply to intake.
-5. **Andrew's name on published profiles.** It appears in the contact block of the Seb Fisher and Bajaber pages (Director of Advisory Services). Approval wording is Afritech; confirm whether the contact block also becomes Afritech-only.
-6. **The phone numbers are public now.** Two numbers and a WhatsApp link are live in Player-Scouting-Forms `players/` until done-item 6.
-7. **Missing files and assets:** Seb Fisher needs the share card, player card, CV page and CV PDF; Bajaber needs all five. Each needs the Afritech logo and a verified player photo, and confirmation that Afritech may publish each photo.
-8. **"Signed" display and "Book a call" by email** (dashboard skill v3.1) are proposed defaults, not yet confirmed.
-9. **CTA orange:** #E8701A (dashboard skill, CV Desk) vs #F97316 (other skills). Unresolved.
-10. **Making this repo public** exposes its history, which currently holds only this plan and the initial commit.
+_Resolved 2026-11-03: draft saving restored in all 8 forms (on the working branch); phone tap-test passed; CV Desk translations accepted for now; contact blocks are Afritech-only; only the Kenyan number remains._
+
+1. **Merge to `main`.** Draft saving and the Afritech-only profile contacts are on branch `claude/dreaming-pass-projects-rxyirh` of Player-Scouting-Forms. The live forms the CV Desk links to update only once that branch is merged into `main`. After the merge, change the CV Desk's step 1 from "finish in one sitting" to "your answers are saved on this phone".
+2. **WhatsApp button:** the Seb Fisher and Bajaber profiles still carry "Chat with Afritech on WhatsApp". Confirm whether it stays and that it reaches the Kenyan number.
+3. **Personal LinkedIn:** with contact blocks Afritech-only, the dashboard skill now lists only the Afritech LinkedIn page. Restore Andrew's personal LinkedIn if wanted.
+4. **Phone fields inside the forms.** The forms ask for the respondent's and guardian's phone or WhatsApp. Confirm this is fine for intake.
+5. **Missing files and assets:** Seb Fisher needs the share card, player card, CV page and CV PDF; Bajaber needs all five. Each needs the Afritech logo and a verified player photo, and confirmation that Afritech may publish each photo.
+6. **"Signed" display and "Book a call" by email** (dashboard skill v3.1) are proposed defaults, not yet confirmed.
+7. **CTA orange:** #E8701A (dashboard skill, CV Desk) vs #F97316 (other skills). Unresolved.
+8. **Making this repo public** exposes its history, which currently holds only this plan and the initial commit.
+9. **Dashboard skill upload:** re-upload `afritech-scouting-dashboard.zip` (updated 2026-11-03 with the Afritech-only contact rules) on claude.ai.
