@@ -77,6 +77,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 1. The CV Desk opens both forms in all four languages on a phone, with no sign-in. **Done 2026-11-03**, except a live tap-test of the links on a phone.
 2. `seb-fisher/` and `mohammed-bajaber/` each hold all five files in section 4. Bajaber is rebuilt to the v3 tabbed template first.
    - **First player published 2026-11-05:** `jackson-dwanga/` (all five files), from his CV Desk form of 2026-11-04. The root `index.html` lists him.
+   - **Done 2026-11-05:** `seb-fisher/` and `mohammed-bajaber/` published with all five files. Bajaber's profile rebuilt into five tabs from his 2 Nov 2026 Player CV; Afritech-only contact, Kenyan number only.
 3. The root `index.html` lists both players with only the section 5 contacts.
 4. Every published page loads on the GitHub Pages address at 390px wide with scripts off.
 5. A search of this repo finds no phone number other than +254 715 551 506, no `tel:` and no personal name in a contact block, and no file names with spaces or `(1)`.
