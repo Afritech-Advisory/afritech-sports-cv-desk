@@ -22,7 +22,8 @@ One path from "here is a player" to "here is a live Player CV":
 No one filling in a form needs a claude.ai account or any sign-in.
 
 ## 3. Intake (live since 2026-11-03)
-- **Front door:** claude.ai artifact "Afritech Sports Player CV Desk", https://claude.ai/artifact/K5uuVkDWXfTQ5P6xEoiEtd, shared as anyone with the link. It has no database or sign-in features.
+- **Front door:** the root page of this repo, https://afritech-advisory.github.io/afritech-sports-cv-desk/ (moved here 2026-11-10 so people can open it without a Claude account). The CV Desk sits at the top and the published players are listed underneath. This is the link to share, including on WhatsApp. It has no database or sign-in features.
+- **Old front door:** the claude.ai artifact "Afritech Sports Player CV Desk", https://claude.ai/artifact/K5uuVkDWXfTQ5P6xEoiEtd. Keep it up for links already sent, but do not share it again.
 - **Languages:** English, Français, Português (BR), Español (LATAM). The page picks the phone's language and has a switch at the top. It works with scripts off (English shown).
 - **Forms:** the two buttons open the existing v5.0 forms from Player-Scouting-Forms on GitHub Pages:
 
@@ -51,7 +52,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 | `<slug>/cv.html` | Player CV as a web page, opening on the CV cover |
 | `<slug>/cv.pdf` | Same CV as PDF, built on `Afritech_Dossier_Front_Page_and_CV_Cover_Template.docx` |
 
-- The root `index.html` lists every live player and links to each profile.
+- The root `index.html` is the CV Desk front door (section 3) followed by every live player, each linking to their profile. When a player is added, add their card under "Players" and leave the front door above it unchanged.
 - Everything here is public. Customer-safe material only: internal decision files, risk notes, price limits and internal method names never go in this repo.
 - English only for published CVs.
 - Pages work fully with scripts off. A small optional script is allowed only if the page works without it.
@@ -71,7 +72,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 - **Under-18s:** Afritech decides case by case before building. No rule applies where the details are already public.
 - **The person forgets to attach the PDF:** Afritech receives nothing usable and replies asking for it.
 - **The person closes the form before saving:** once the draft-saving change is live, their answers come back when they reopen the form on the same phone. A different phone or a cleared browser starts empty.
-- **Links already sent:** the CV Desk link has been shared and stays the same. No links to `player-scouting-forms/players/` were sent, so those pages can simply be deleted.
+- **Links already sent:** the claude.ai CV Desk link has been shared and stays up; new shares use the GitHub address in section 3. No links to `player-scouting-forms/players/` were sent, so those pages can simply be deleted.
 
 ## 7. Definition of done (version 1)
 1. The CV Desk opens both forms in all four languages on a phone, with no sign-in. **Done 2026-11-03**, except a live tap-test of the links on a phone.
