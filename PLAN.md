@@ -104,24 +104,3 @@ _Resolved 2026-11-03: draft saving restored in all 8 forms (on the working branc
 7. **CTA orange:** #E8701A (dashboard skill, CV Desk) vs #F97316 (other skills). Unresolved.
 8. **Making this repo public** exposes its history, which currently holds only this plan and the initial commit.
 9. **Dashboard skill upload:** re-upload `afritech-scouting-dashboard.zip` (updated 2026-11-03 with the Afritech-only contact rules) on claude.ai.
-
-## 10. Coach CV Desk (added 2026-11-15, on branch, not yet live)
-The same path as players, for coaches. It lives in `coaches/` in this repo.
-
-- **Front door:** `coaches/index.html`, at `https://afritech-advisory.github.io/afritech-sports-cv-desk/coaches/` once merged. The root page links to it from a "Coaches" section under the players.
-- **Two forms, English only for now:**
-
-| Who fills it in | Form | File |
-|---|---|---|
-| The coach | Coach CV & Career Profile Form v1.0 (12 sections, new) | `coaches/coach-cv.html` |
-| Anyone assessing a coach: player, parent, school, academy, college, university, club, federation or agency, in any country | Coach Intelligence & Assessment Form v5.1 | `coaches/coach-assessment.html` |
-
-- **Coach CV form:** covers every kind of coach (head coach, tactical, physical performance, goalkeeping, youth and others) and men's and women's football. Tactical coaching (section 6) and physical performance coaching (section 7) are separate sections; a coach completes the ones that fit.
-- **Assessment form:** the v5.0 Coach-hire form from Player-Scouting-Forms, with the assessor list widened beyond clubs, federations and agencies, the kind of coaching and men's or women's football added to the cover, questions for physical performance specialists added to section 9, and experience in men's and women's football added to section 3. The v5.0 copies in Player-Scouting-Forms are unchanged.
-- **Both forms** save a draft on the phone, and are sent the same way as the player forms: Review, Save as PDF, email to Advisory@afritechsports.com.
-- **First coaches:** Afritech Sports' own coaches fill in the Coach CV form. Their profiles go in `coaches/<slug>/` and are listed on `coaches/index.html`, which says none are published yet.
-
-Open flags for coaches:
-1. No published Coach CV template exists yet. The dashboard skill builds player profiles only.
-2. French, Portuguese (BR) and Spanish (LATAM) versions wait until the questions are settled.
-3. Player-Scouting-Forms still hosts the player and scout forms. Moving them here and redirecting the old addresses is proposed, not done.
