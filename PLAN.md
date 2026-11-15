@@ -25,7 +25,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 - **Front door:** the root page of this repo, https://afritech-advisory.github.io/afritech-sports-cv-desk/ (moved here 2026-11-10 so people can open it without a Claude account). The CV Desk sits at the top and the published players are listed underneath. This is the link to share, including on WhatsApp. It has no database or sign-in features.
 - **Old front door:** the claude.ai artifact "Afritech Sports Player CV Desk", https://claude.ai/artifact/K5uuVkDWXfTQ5P6xEoiEtd. Keep it up for links already sent, but do not share it again.
 - **Languages:** English, Français, Português (BR), Español (LATAM). The page picks the phone's language and has a switch at the top. It works with scripts off (English shown).
-- **Forms:** the two buttons open the existing v5.0 forms from Player-Scouting-Forms on GitHub Pages:
+- **Forms:** the two buttons open the v5.0 forms in the `forms/` folder of this repo (moved here from Player-Scouting-Forms on 2026-11-15, on branch until merged):
 
 | Language | Player / parent | Scout / coach / agent |
 |---|---|---|
@@ -34,7 +34,7 @@ No one filling in a form needs a claude.ai account or any sign-in.
 | Português (BR) | `player-ptbr.html` | `scout-ptbr.html` |
 | Español (LATAM) | `player-eslatam.html` | `scout-eslatam.html` |
 
-  Base address: `https://afritech-advisory.github.io/Player-Scouting-Forms/`
+  Base address: `https://afritech-advisory.github.io/afritech-sports-cv-desk/forms/`
 - **Drafts:** the forms save answers on the phone as people type and restore them on reopening, with a "Clear saved answers" button (restored and live 2026-11-03).
 - **Sending:** in the form, Review, then Save as PDF, then email the PDF to Advisory@afritechsports.com.
 - **Standard:** the forms must keep everything in the v4.2 Player / Parent form Andrew supplied: all sections, repeatable entries, a progress percentage, Review, Copy text, Save as PDF, and readable without scripts.
@@ -104,3 +104,18 @@ _Resolved 2026-11-03: draft saving restored in all 8 forms (on the working branc
 7. **CTA orange:** #E8701A (dashboard skill, CV Desk) vs #F97316 (other skills). Unresolved.
 8. **Making this repo public** exposes its history, which currently holds only this plan and the initial commit.
 9. **Dashboard skill upload:** re-upload `afritech-scouting-dashboard.zip` (updated 2026-11-03 with the Afritech-only contact rules) on claude.ai.
+
+## 10. One site for the forms (2026-11-15, on branch, not yet live)
+- Every form now lives in `forms/` in this repo: the player, scout, coach and coach-hire browser forms in four languages, the three dashboards, the 16 fillable PDFs and the forms list page (`forms/index.html`). 36 files, copied unchanged except that the dashboards' own address now points here.
+- The CV Desk buttons link to `forms/player*.html` and `forms/scout*.html`.
+- Player-Scouting-Forms becomes redirects only: each old page forwards to the same file name here, and its `404.html` forwards anything else, including the old PDF addresses. It is no longer updated.
+- Drafts carry over, because both sites share the address `afritech-advisory.github.io` and the forms keep their file names.
+- **Merge order:** this repo first, then Player-Scouting-Forms. The other way round, the old addresses would forward to pages that do not exist yet.
+- **After both merges:** tap-test one old form address on a phone, then archive Player-Scouting-Forms (leave Pages on so the redirects keep working).
+
+## 11. Four segments (direction set 2026-11-15)
+Afritech Sports is to become the football recruitment and employment hub, built one segment at a time, each in its own session:
+1. Players (this desk; forms move above comes first).
+2. Coaches. A first draft of a Coach CV Desk was built and set aside on 2026-11-15: commit `537dd4b` on branch `claude/nifty-lamport-e3od7w`, reverted by `4a8fe30`. Rulings already given for it: a coach's own CV form plus an assessment form open to players, parents, schools, academies, colleges, universities, clubs, federations and agencies in any country; tactical and physical performance coaching both covered; both genders; English first; Afritech's own coaches are the first examples and fill in the form themselves.
+3. Scouts.
+4. Football data analysts.
