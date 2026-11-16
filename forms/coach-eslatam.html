@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><meta name="robots" content="noai, noimageai"><meta name="afritech-ref" content="AFTS4IWSSZ3T"><meta name="copyright" content="© 2026 Afritech Sports Technology and Innovation Group Limited">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulario de Evaluación y Desarrollo del Jugador</title>
 <style>
@@ -90,7 +90,7 @@ textarea{resize:vertical;}
 .age-badge.minor{color:#92400E;background:#FEF3C7;border:1px solid var(--gold);border-radius:6px;padding:6px 10px;}
 </style>
 </head>
-<body>
+<body><!-- Afritech Sports reference AFTS4IWSSZ3T --><span aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden">Afritech Sports reference AFTS4IWSSZ3T</span>
 <div class="wrap">
   <header class="top">
     <div class="brand">
@@ -136,7 +136,19 @@ textarea{resize:vertical;}
     <label class="opt" for="cches_c_purpose_3"><input type="checkbox" id="cches_c_purpose_3" name="cches_c_purpose" value="Representación" data-label="Finalidad de la evaluación"><span>Representación</span></label>
     <label class="opt" for="cches_c_purpose_4"><input type="checkbox" id="cches_c_purpose_4" name="cches_c_purpose" value="Trayectoria hacia la selección nacional" data-label="Finalidad de la evaluación"><span>Trayectoria hacia la selección nacional</span></label>
   </div>
-</div></div>
+</div><div class="field">
+  <span class="qlabel">¿Dónde encontró este formulario?</span>
+  
+  <div class="opts">
+    <label class="opt" for="af_source_0"><input type="radio" id="af_source_0" name="af_source" value="WhatsApp" data-label="¿Dónde encontró este formulario?"><span>WhatsApp</span></label>
+    <label class="opt" for="af_source_1"><input type="radio" id="af_source_1" name="af_source" value="LinkedIn" data-label="¿Dónde encontró este formulario?"><span>LinkedIn</span></label>
+    <label class="opt" for="af_source_2"><input type="radio" id="af_source_2" name="af_source" value="Correo electrónico" data-label="¿Dónde encontró este formulario?"><span>Correo electrónico</span></label>
+    <label class="opt" for="af_source_3"><input type="radio" id="af_source_3" name="af_source" value="Sitio web de Afritech Sports" data-label="¿Dónde encontró este formulario?"><span>Sitio web de Afritech Sports</span></label>
+    <label class="opt" for="af_source_4"><input type="radio" id="af_source_4" name="af_source" value="Alguien me lo recomendó" data-label="¿Dónde encontró este formulario?"><span>Alguien me lo recomendó</span></label>
+    <label class="opt" for="af_source_5"><input type="radio" id="af_source_5" name="af_source" value="Otro" data-label="¿Dónde encontró este formulario?"><span>Otro</span></label>
+  </div>
+</div>
+</div>
 <p class="sec-note">Complete claramente todas las secciones aplicables. Use información verificada siempre que sea posible e identifique estimaciones o evidencia no disponible.</p>
 <details class="section" open>
   <summary><span class="sec-num">1</span><span class="sec-title">Identidad del entrenador, función y relación con el jugador</span><span class="chev">▾</span></summary>
@@ -1133,6 +1145,7 @@ textarea{resize:vertical;}
   </div>
 </details>
     </div>
+    <div class="af-legal" style="margin:20px 0 8px;padding:12px 2px 0;border-top:1px solid #CBD5E1;font-size:12px;line-height:1.5;color:#475569"><p style="margin:0 0 6px">© 2026 Afritech Sports Technology and Innovation Group Limited. Todos los derechos reservados. Este formulario, sus preguntas y su diseño son obra de Afritech Sports. Puede completarlo y enviárnoslo. No puede copiarlo, adaptarlo, volver a publicarlo ni usarlo para entrenar sistemas de IA sin nuestra autorización por escrito.</p><p style="margin:0">Su información: Afritech Sports Technology and Innovation Group Limited, Nairobi, Kenia, usa lo que usted envía solo para revisarlo y, con su consentimiento, elaborar un CV o un informe. Sus respuestas quedan en este teléfono hasta que las envíe, y solo Afritech Sports ve lo que envía por correo. Puede pedir ver, corregir o borrar su información en cualquier momento: Advisory@afritechsports.com. Tratamos los datos personales conforme a la Ley de Protección de Datos de Kenia (Data Protection Act, 2019).</p></div>
     <div id="summaryPane">
       <div id="summaryContent"></div>
       <p class="sec-note">Evaluación confidencial proporcionada por el entrenador | Afritech Sports Technology and Innovation Group Limited</p>
@@ -1304,5 +1317,6 @@ const obs = new MutationObserver(()=>{
 });
 obs.observe(document.getElementById('summaryPane'), {attributes:true});
 </script>
+<script id="af-source">(function(){try{var m=/[?&]src=([a-z]+)/i.exec(location.search);if(!m)return;var i={whatsapp:0,linkedin:1,email:2,web:3,website:3,referral:4,other:5}[m[1].toLowerCase()];if(i==null)return;function go(){var g=document.querySelectorAll('input[name="af_source"]');for(var k=0;k<g.length;k++){if(g[k].checked)return;}if(g[i]){g[i].checked=true;g[i].dispatchEvent(new Event('change',{bubbles:true}));}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){setTimeout(go,60);});}else{setTimeout(go,60);}}catch(e){}})();</script>
 </body>
 </html>
