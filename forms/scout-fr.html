@@ -80,6 +80,7 @@ textarea{resize:vertical;}
   header.top, .footer-actions, details.section, .btn-secondary{display:none !important;}
   #summaryPane{display:block !important;}
   body{background:#fff;}
+  .wrap{min-height:0;}
 }
 
 .note{font-size:12.5px;color:var(--muted);background:var(--light);border-left:3px solid var(--teal);border-radius:6px;padding:8px 10px;margin:0 0 12px;}
@@ -1548,11 +1549,20 @@ textarea{resize:vertical;}
   <div class="footer-actions" id="summaryActions" style="display:none">
     <button class="btn btn-secondary" onclick="backToForm()">Retour au formulaire</button>
     <button class="btn btn-secondary" onclick="copySummary()">Copier le texte</button>
-    <button class="btn btn-primary" onclick="window.print()">Enregistrer en PDF</button>
+    <button class="btn btn-primary" onclick="document.title=pdfName();window.print()">Enregistrer en PDF</button>
   </div>
 </div>
 <script>
 
+/* The PDF file name comes from the page title, so put the person's name in it while saving. */
+const FORM_TITLE = document.title;
+function pdfName(){
+  const el = document.getElementById('scoutfr_nom_complet_du_joueur');
+  const name = el ? el.value.replace(/[\\/:*?"<>|.]+/g,' ').replace(/\s+/g,' ').trim() : '';
+  return name ? 'Player Scouting - ' + name : FORM_TITLE;
+}
+window.addEventListener('beforeprint', ()=>{ document.title = pdfName(); });
+window.addEventListener('afterprint', ()=>{ document.title = FORM_TITLE; });
 function addCard(id){
   const tpl = document.getElementById(id+'_tpl');
   const cards = document.getElementById(id+'_cards');
@@ -1628,7 +1638,7 @@ function applyMinor(){
 function buildSummary(){
   applyMinor();
   const sections = document.querySelectorAll('details.section');
-  let html = '<h2>'+document.title+'</h2>';
+  let html = '<h2>'+FORM_TITLE+'</h2>';
   const coverBox = document.querySelector('.cover-fields');
   if(coverBox){
     let coverItems = '';
@@ -1679,6 +1689,7 @@ function printSummary(){
   buildSummary();
   document.getElementById('summaryPane').classList.add('show');
   document.getElementById('formPane').style.display='none';
+  document.title = pdfName();
   setTimeout(()=>window.print(), 150);
 }
 async function copySummary(){
