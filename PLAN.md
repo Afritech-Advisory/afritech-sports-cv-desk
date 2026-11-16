@@ -117,7 +117,7 @@ _Resolved 2026-11-03: draft saving restored in all 8 forms (on the working branc
 Afritech Sports is to become the football recruitment and employment hub, built one segment at a time, each in its own session:
 1. Players (this desk; forms move above comes first).
 2. Coaches. **Live 2026-11-16, see section 12.** History: a first draft of a Coach CV Desk was built and set aside on 2026-11-15: commit `537dd4b` on branch `claude/nifty-lamport-e3od7w`, reverted by `4a8fe30`. Rulings already given for it: a coach's own CV form plus an assessment form open to players, parents, schools, academies, colleges, universities, clubs, federations and agencies in any country; tactical and physical performance coaching both covered; both genders; English first; Afritech's own coaches are the first examples and fill in the form themselves.
-3. Scouts.
+3. Scouts. **Built 2026-11-16, see section 13.**
 4. Football data analysts.
 
 ## 12. Coach CV Desk (live 2026-11-16)
@@ -145,3 +145,29 @@ Open flags for coaches:
 2. French, Portuguese (BR) and Spanish (LATAM) versions wait until the questions are settled.
 3. The dashboard skill builds player profiles only. Coach CVs are built by hand from the sample layout until it learns coaches.
 4. Coach share card (`share.png`), coach card and PDF CV are not designed yet.
+
+## 13. Scout CV Desk (built 2026-11-16)
+The same path as players and coaches, for scouts. It lives in `scouts/` in this repo.
+
+- **Front door:** `scouts/index.html`, at `https://afritech-advisory.github.io/afritech-sports-cv-desk/scouts/`. This is the one link to send scouts. The root page links to it from a "Scouts" section under the coaches.
+- **Two forms, English only for now:**
+
+| Who fills it in | Form | File |
+|---|---|---|
+| The scout | Scout CV & Career Profile Form v1.0 (12 sections) | `scouts/scout-cv.html` |
+| Anyone assessing a scout: player, parent, school, academy, college, university, club, federation or agency, in any country | Scout Intelligence & Assessment Form v1.0 (15 sections) | `scouts/scout-assessment.html` |
+
+- **Not the same as `forms/scout*.html`.** Those are the v5.0 Player Recruitment & Market Intelligence forms, which a scout, coach or agent fills in about a player. They are unchanged. The Scout CV Desk forms are about the scout. Both new forms point a scout who wants to report on a player back to the front page.
+- **No base form existed.** There was no "scout-hire" form to build from, so the assessment form is new, v1.0, built on the section pattern of the v5.1 Coach assessment form.
+- **Scout CV form:** covers every kind of scout (club, academy, area, independent, agency, video, data, opposition, college recruitment, physical profiling, chief scout), men's and women's football, and the scout's own gender. Technical and tactical scouting (section 6) and physical performance scouting (section 7) are separate; a scout completes the ones that fit. Section 5 is the track record: players identified, with who can confirm it. Section 8 asks how the scout approaches under-18s and families, and whether they have ever charged a player or family.
+- **Assessment form:** section 3 lets a family check a scout who has approached them: whether the named club confirmed the scout works for it, whether money was asked for, the FIFA agent licence, safeguarding and background checks. Section 13 has separate decisions for players and families, for clubs, federations and agencies, and for an agency representing the scout. Section 10 (cost) is marked as one players and families can skip.
+- **Both forms** save a draft on the phone and are sent like the others: Review, Save as PDF, email to Advisory@afritechsports.com. Save as PDF names the file `Scout CV - <name>.pdf` or `Scout Assessment - <name>.pdf` from "Scout full name". With scripts off the forms can be read, with the same notice as the coach forms. Contact, wording and publishing rules are sections 4 and 5.
+- **First scouts:** Afritech Sports' own scouts fill in the Scout CV form themselves. Never invent a scout, a name or a detail. Their profiles go in `scouts/<slug>/` and are listed on `scouts/index.html`, which says none are published yet until the first one is.
+- **Published Scout CV layout:** `scouts/sample-layout/index.html`, based on the player profile and the coach sample. Tabs: Profile, How they scout, Players found, Career, Evidence, Contact. Every line in it is marked placeholder. It is not linked from any page and asks search engines not to list it. To publish a scout, copy it to `scouts/<slug>/`, replace every placeholder with the scout's own answers, remove the sample banner and the noindex line, and add the scout's card to `scouts/index.html`.
+
+Open flags for scouts:
+1. What an assessor gets back after sending the assessment form is not yet stated beyond "Afritech Sports reviews it" (same as coaches).
+2. French, Portuguese (BR) and Spanish (LATAM) versions wait until the questions are settled.
+3. The dashboard skill builds player profiles only. Scout CVs are built by hand from the sample layout.
+4. Scout share card, scout card and PDF CV are not designed yet.
+5. A player named in a scout's track record is published only with the player's (or parent's) agreement and once Afritech Sports can confirm it.
