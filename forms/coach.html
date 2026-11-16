@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><meta name="robots" content="noai, noimageai"><meta name="afritech-ref" content="AFTSRJNCYTEU"><meta name="copyright" content="© 2026 Afritech Sports Technology and Innovation Group Limited">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Player Assessment and Development Form</title>
 <style>
@@ -90,7 +90,7 @@ textarea{resize:vertical;}
 .age-badge.minor{color:#92400E;background:#FEF3C7;border:1px solid var(--gold);border-radius:6px;padding:6px 10px;}
 </style>
 </head>
-<body>
+<body><!-- Afritech Sports reference AFTSRJNCYTEU --><span aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden">Afritech Sports reference AFTSRJNCYTEU</span>
 <div class="wrap">
   <header class="top">
     <div class="brand">
@@ -136,7 +136,19 @@ textarea{resize:vertical;}
     <label class="opt" for="cch_c_purpose_3"><input type="checkbox" id="cch_c_purpose_3" name="cch_c_purpose" value="Representation" data-label="Purpose of assessment"><span>Representation</span></label>
     <label class="opt" for="cch_c_purpose_4"><input type="checkbox" id="cch_c_purpose_4" name="cch_c_purpose" value="National-team pathway" data-label="Purpose of assessment"><span>National-team pathway</span></label>
   </div>
-</div></div>
+</div><div class="field">
+  <span class="qlabel">Where did you find this form?</span>
+  
+  <div class="opts">
+    <label class="opt" for="af_source_0"><input type="radio" id="af_source_0" name="af_source" value="WhatsApp" data-label="Where did you find this form?"><span>WhatsApp</span></label>
+    <label class="opt" for="af_source_1"><input type="radio" id="af_source_1" name="af_source" value="LinkedIn" data-label="Where did you find this form?"><span>LinkedIn</span></label>
+    <label class="opt" for="af_source_2"><input type="radio" id="af_source_2" name="af_source" value="Email" data-label="Where did you find this form?"><span>Email</span></label>
+    <label class="opt" for="af_source_3"><input type="radio" id="af_source_3" name="af_source" value="Afritech Sports website" data-label="Where did you find this form?"><span>Afritech Sports website</span></label>
+    <label class="opt" for="af_source_4"><input type="radio" id="af_source_4" name="af_source" value="Someone recommended it" data-label="Where did you find this form?"><span>Someone recommended it</span></label>
+    <label class="opt" for="af_source_5"><input type="radio" id="af_source_5" name="af_source" value="Other" data-label="Where did you find this form?"><span>Other</span></label>
+  </div>
+</div>
+</div>
 <p class="sec-note">Complete every applicable section clearly. Use verified information wherever possible and identify estimates or unavailable evidence.</p>
 <details class="section" open>
   <summary><span class="sec-num">1</span><span class="sec-title">Coach identity, role and relationship to the player</span><span class="chev">▾</span></summary>
@@ -1133,6 +1145,7 @@ textarea{resize:vertical;}
   </div>
 </details>
     </div>
+    <div class="af-legal" style="margin:20px 0 8px;padding:12px 2px 0;border-top:1px solid #CBD5E1;font-size:12px;line-height:1.5;color:#475569"><p style="margin:0 0 6px">© 2026 Afritech Sports Technology and Innovation Group Limited. All rights reserved. This form, its questions and its layout are Afritech Sports&#x27; work. You may fill it in and send it to us. You may not copy, adapt, republish or use it to train AI systems without our written permission.</p><p style="margin:0">Your information: Afritech Sports Technology and Innovation Group Limited, Nairobi, Kenya, uses what you send only to review it and, where you agree, to build a CV or report. Your answers stay on this phone until you send them, and only Afritech Sports sees what you email. You can ask to see, correct or delete your information at any time: Advisory@afritechsports.com. We handle personal data under Kenya&#x27;s Data Protection Act, 2019.</p></div>
     <div id="summaryPane">
       <div id="summaryContent"></div>
       <p class="sec-note">Confidential assessment supplied by the coach | Afritech Sports Technology and Innovation Group Limited</p>
@@ -1310,5 +1323,6 @@ const obs = new MutationObserver(()=>{
 });
 obs.observe(document.getElementById('summaryPane'), {attributes:true});
 </script>
+<script id="af-source">(function(){try{var m=/[?&]src=([a-z]+)/i.exec(location.search);if(!m)return;var i={whatsapp:0,linkedin:1,email:2,web:3,website:3,referral:4,other:5}[m[1].toLowerCase()];if(i==null)return;function go(){var g=document.querySelectorAll('input[name="af_source"]');for(var k=0;k<g.length;k++){if(g[k].checked)return;}if(g[i]){g[i].checked=true;g[i].dispatchEvent(new Event('change',{bubbles:true}));}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){setTimeout(go,60);});}else{setTimeout(go,60);}}catch(e){}})();</script>
 </body>
 </html>

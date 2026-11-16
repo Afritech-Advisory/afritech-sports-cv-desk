@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><meta name="robots" content="noai, noimageai"><meta name="afritech-ref" content="AFTSNC4IGA43"><meta name="copyright" content="© 2026 Afritech Sports Technology and Innovation Group Limited">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulaire d'intelligence et d'évaluation d'entraîneur</title>
 <style>
@@ -84,7 +84,7 @@ textarea{resize:vertical;}
 }
 </style>
 </head>
-<body>
+<body><!-- Afritech Sports reference AFTSNC4IGA43 --><span aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden">Afritech Sports reference AFTSNC4IGA43</span>
 <div class="wrap">
   <header class="top">
     <div class="brand">
@@ -141,7 +141,19 @@ textarea{resize:vertical;}
     <label class="opt" for="coachfr_mandat_d_cision_requise_7"><input type="checkbox" id="coachfr_mandat_d_cision_requise_7" name="coachfr_mandat_d_cision_requise" value="Suivre" data-label="Mandat / décision requise"><span>Suivre</span></label>
     <label class="opt" for="coachfr_mandat_d_cision_requise_8"><input type="checkbox" id="coachfr_mandat_d_cision_requise_8" name="coachfr_mandat_d_cision_requise" value="Réviser la résiliation" data-label="Mandat / décision requise"><span>Réviser la résiliation</span></label>
   </div>
-</div></div>
+</div><div class="field">
+  <span class="qlabel">Où avez-vous trouvé ce formulaire ?</span>
+  
+  <div class="opts">
+    <label class="opt" for="af_source_0"><input type="radio" id="af_source_0" name="af_source" value="WhatsApp" data-label="Où avez-vous trouvé ce formulaire ?"><span>WhatsApp</span></label>
+    <label class="opt" for="af_source_1"><input type="radio" id="af_source_1" name="af_source" value="LinkedIn" data-label="Où avez-vous trouvé ce formulaire ?"><span>LinkedIn</span></label>
+    <label class="opt" for="af_source_2"><input type="radio" id="af_source_2" name="af_source" value="E-mail" data-label="Où avez-vous trouvé ce formulaire ?"><span>E-mail</span></label>
+    <label class="opt" for="af_source_3"><input type="radio" id="af_source_3" name="af_source" value="Site web d&#x27;Afritech Sports" data-label="Où avez-vous trouvé ce formulaire ?"><span>Site web d&#x27;Afritech Sports</span></label>
+    <label class="opt" for="af_source_4"><input type="radio" id="af_source_4" name="af_source" value="Une personne me l&#x27;a recommandé" data-label="Où avez-vous trouvé ce formulaire ?"><span>Une personne me l&#x27;a recommandé</span></label>
+    <label class="opt" for="af_source_5"><input type="radio" id="af_source_5" name="af_source" value="Autre" data-label="Où avez-vous trouvé ce formulaire ?"><span>Autre</span></label>
+  </div>
+</div>
+</div>
       
 <details class="section" open>
   <summary><span class="sec-num">1</span><span class="sec-title">Évaluateur, mandat et contexte de décision</span><span class="chev">▾</span></summary>
@@ -1169,6 +1181,7 @@ textarea{resize:vertical;}
   </div>
 </details>
     </div>
+    <div class="af-legal" style="margin:20px 0 8px;padding:12px 2px 0;border-top:1px solid #CBD5E1;font-size:12px;line-height:1.5;color:#475569"><p style="margin:0 0 6px">© 2026 Afritech Sports Technology and Innovation Group Limited. Tous droits réservés. Ce formulaire, ses questions et sa mise en page sont l&#x27;œuvre d&#x27;Afritech Sports. Vous pouvez le remplir et nous l&#x27;envoyer. Vous ne pouvez pas le copier, l&#x27;adapter, le republier ni l&#x27;utiliser pour entraîner des systèmes d&#x27;IA sans notre autorisation écrite.</p><p style="margin:0">Vos informations : Afritech Sports Technology and Innovation Group Limited, Nairobi (Kenya), utilise ce que vous envoyez uniquement pour l&#x27;examiner et, avec votre accord, établir un CV ou un rapport. Vos réponses restent sur ce téléphone jusqu&#x27;à leur envoi, et seule Afritech Sports voit ce que vous envoyez par e-mail. Vous pouvez demander à consulter, corriger ou supprimer vos informations à tout moment : Advisory@afritechsports.com. Nous traitons les données personnelles conformément à la loi kényane sur la protection des données (Data Protection Act, 2019).</p></div>
     <div id="summaryPane">
       <div id="summaryContent"></div>
       <p class="sec-note">Évaluation confidentielle de recrutement et de représentation | Afritech Sports Technology and Innovation Group Limited</p>
@@ -1303,5 +1316,6 @@ const obs = new MutationObserver(()=>{
 });
 obs.observe(document.getElementById('summaryPane'), {attributes:true});
 </script>
+<script id="af-source">(function(){try{var m=/[?&]src=([a-z]+)/i.exec(location.search);if(!m)return;var i={whatsapp:0,linkedin:1,email:2,web:3,website:3,referral:4,other:5}[m[1].toLowerCase()];if(i==null)return;function go(){var g=document.querySelectorAll('input[name="af_source"]');for(var k=0;k<g.length;k++){if(g[k].checked)return;}if(g[i]){g[i].checked=true;g[i].dispatchEvent(new Event('change',{bubbles:true}));}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){setTimeout(go,60);});}else{setTimeout(go,60);}}catch(e){}})();</script>
 </body>
 </html>

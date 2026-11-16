@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><meta name="robots" content="noai, noimageai"><meta name="afritech-ref" content="AFTSDPB2GPI3"><meta name="copyright" content="© 2026 Afritech Sports Technology and Innovation Group Limited">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scout CV &amp; Career Profile Form</title>
 <meta name="description" content="For football scouts: fill in this form and Afritech Sports builds your Scout CV.">
@@ -86,7 +86,7 @@ textarea{resize:vertical;}
 </style>
 <noscript><style>.footer-actions,.add-btn,.progress-wrap,.progress-label{display:none!important}.nojs{background:#FEF3C7;border:1px solid #E9C46A;border-radius:8px;padding:10px 12px;font-size:13.5px;color:#1F2937;margin:0 0 12px}</style></noscript>
 </head>
-<body>
+<body><!-- Afritech Sports reference AFTSDPB2GPI3 --><span aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden">Afritech Sports reference AFTSDPB2GPI3</span>
 <div class="wrap">
   <header class="top">
     <div class="brand">
@@ -102,7 +102,7 @@ textarea{resize:vertical;}
   <main>
     <div id="formPane">
       <noscript><p class="nojs"><b>Scripts are switched off in this browser.</b> You can read every question, but saving your answers, the Add buttons, Review and Save as PDF only work with scripts on. Switch scripts on and reload this page, or email Advisory@afritechsports.com for help.</p></noscript>
-      <p class="sec-note" style="font-style:normal">When you finish, tap Review, then Save as PDF, and email the PDF to <b>Advisory@afritechsports.com</b>. Your answers are saved on this phone as you go. Complete the sections that fit your work and skip the rest. To report on a player instead, use the scout form on the <a href="../" style="color:var(--teal)">CV Desk front page</a>.</p>
+      <p class="sec-note" style="font-style:normal">When you finish, tap Review, then Save as PDF, and email the PDF to <b>Advisory@afritechsports.com</b>. Your answers are saved on this phone as you go. Complete the sections that fit your work and skip the rest. To report on a player instead, use the scout form on the <a href="../players/" style="color:var(--teal)">Player CV Desk</a>.</p>
       <div class="cover-fields">
 <div class="field">
   <label for="scv_scout_full_name">Scout full name</label>
@@ -140,7 +140,19 @@ textarea{resize:vertical;}
   <input type="date" id="scv_date_completed" name="scv_date_completed" data-label="Date completed">
 </div>
 
-      </div>
+      <div class="field">
+  <span class="qlabel">Where did you find this form?</span>
+  
+  <div class="opts">
+    <label class="opt" for="af_source_0"><input type="radio" id="af_source_0" name="af_source" value="WhatsApp" data-label="Where did you find this form?"><span>WhatsApp</span></label>
+    <label class="opt" for="af_source_1"><input type="radio" id="af_source_1" name="af_source" value="LinkedIn" data-label="Where did you find this form?"><span>LinkedIn</span></label>
+    <label class="opt" for="af_source_2"><input type="radio" id="af_source_2" name="af_source" value="Email" data-label="Where did you find this form?"><span>Email</span></label>
+    <label class="opt" for="af_source_3"><input type="radio" id="af_source_3" name="af_source" value="Afritech Sports website" data-label="Where did you find this form?"><span>Afritech Sports website</span></label>
+    <label class="opt" for="af_source_4"><input type="radio" id="af_source_4" name="af_source" value="Someone recommended it" data-label="Where did you find this form?"><span>Someone recommended it</span></label>
+    <label class="opt" for="af_source_5"><input type="radio" id="af_source_5" name="af_source" value="Other" data-label="Where did you find this form?"><span>Other</span></label>
+  </div>
+</div>
+</div>
       <div style="height:12px"></div>
 
 <details class="section">
@@ -733,6 +745,7 @@ textarea{resize:vertical;}
   </div>
 </details>
     </div>
+    <div class="af-legal" style="margin:20px 0 8px;padding:12px 2px 0;border-top:1px solid #CBD5E1;font-size:12px;line-height:1.5;color:#475569"><p style="margin:0 0 6px">© 2026 Afritech Sports Technology and Innovation Group Limited. All rights reserved. This form, its questions and its layout are Afritech Sports&#x27; work. You may fill it in and send it to us. You may not copy, adapt, republish or use it to train AI systems without our written permission.</p><p style="margin:0">Your information: Afritech Sports Technology and Innovation Group Limited, Nairobi, Kenya, uses what you send only to review it and, where you agree, to build a CV or report. Your answers stay on this phone until you send them, and only Afritech Sports sees what you email. You can ask to see, correct or delete your information at any time: Advisory@afritechsports.com. We handle personal data under Kenya&#x27;s Data Protection Act, 2019.</p></div>
     <div id="summaryPane">
       <div id="summaryContent"></div>
       <p class="sec-note">Confidential scout profile | Afritech Sports Technology and Innovation Group Limited</p>
@@ -924,5 +937,6 @@ obs.observe(document.getElementById('summaryPane'), {attributes:true});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
+<script id="af-source">(function(){try{var m=/[?&]src=([a-z]+)/i.exec(location.search);if(!m)return;var i={whatsapp:0,linkedin:1,email:2,web:3,website:3,referral:4,other:5}[m[1].toLowerCase()];if(i==null)return;function go(){var g=document.querySelectorAll('input[name="af_source"]');for(var k=0;k<g.length;k++){if(g[k].checked)return;}if(g[i]){g[i].checked=true;g[i].dispatchEvent(new Event('change',{bubbles:true}));}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){setTimeout(go,60);});}else{setTimeout(go,60);}}catch(e){}})();</script>
 </body>
 </html>
