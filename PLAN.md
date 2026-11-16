@@ -118,7 +118,7 @@ Afritech Sports is to become the football recruitment and employment hub, built 
 1. Players (this desk; forms move above comes first).
 2. Coaches. **Live 2026-11-16, see section 12.** History: a first draft of a Coach CV Desk was built and set aside on 2026-11-15: commit `537dd4b` on branch `claude/nifty-lamport-e3od7w`, reverted by `4a8fe30`. Rulings already given for it: a coach's own CV form plus an assessment form open to players, parents, schools, academies, colleges, universities, clubs, federations and agencies in any country; tactical and physical performance coaching both covered; both genders; English first; Afritech's own coaches are the first examples and fill in the form themselves.
 3. Scouts. **Built 2026-11-16, see section 13.**
-4. Football data analysts.
+4. Football analysts (all analysis roles, not only data). **Built 2026-11-16, see section 14.** Andrew's instruction of 2026-11-15: apply the coach rulings with "analyst" in place of "coach".
 
 ## 12. Coach CV Desk (live 2026-11-16)
 The same path as players, for coaches. It lives in `coaches/` in this repo.
@@ -171,3 +171,28 @@ Open flags for scouts:
 3. The dashboard skill builds player profiles only. Scout CVs are built by hand from the sample layout.
 4. Scout share card, scout card and PDF CV are not designed yet.
 5. A player named in a scout's track record is published only with the player's (or parent's) agreement and once Afritech Sports can confirm it.
+
+## 14. Analyst CV Desk (built 2026-11-16)
+The same path as players and coaches, for football analysts. It lives in `analysts/` in this repo.
+
+- **Front door:** `analysts/index.html`, at `https://afritech-advisory.github.io/afritech-sports-cv-desk/analysts/`. This is the one link to send analysts. The root page links to it from an "Analysts" section under the scouts.
+- **Rulings applied (the coach rulings, with "analyst" for "coach"):** two forms, one the analyst fills in about themselves and one for anyone assessing an analyst; the assessment form is open to every football stakeholder in any country; both forms cover tactical and video analysis and physical performance (sports science) data; both cover men's and women's football and the analyst's own gender; English first; the first Analyst CVs are Afritech Sports' own analysts, who fill in the form themselves; never invent an analyst, a name or a detail; contact, wording and publishing rules are sections 4 and 5.
+- **Roles covered (both forms):** first-team performance, opposition / pre-match, post-match and video, live (in-game), set-piece, tactical, academy / youth development, goalkeeping, recruitment / scouting, data scientist, data engineer / developer, physical performance / sports science data, medical and injury data, match data collection / tagging / annotation, referee and officiating, federation / league / competition, business / commercial / fan data, media / broadcast / journalism, lecturer / researcher, other.
+- **Two forms, English only for now:**
+
+| Who fills it in | Form | File |
+|---|---|---|
+| The analyst | Analyst CV & Career Profile Form v1.0 (15 sections) | `analysts/analyst-cv.html` |
+| Anyone assessing an analyst: player, parent, school, academy, college, university, club, head coach or head of analysis, federation, league, data or technology company, media group or agency, in any country | Analyst Intelligence & Assessment Form v1.0 (15 sections plus 11A and 14A) | `analysts/analyst-assessment.html` |
+
+- **Analyst CV form sections:** 1 About you; 2 Right to work and availability (on site, remote, match days, freelance; equipment); 3 Qualifications, education and safeguarding (including data protection training); 4 Analysis career (men's and women's football experience); 5 Tools and data (video software, event and tracking data, GPS and testing, cameras, coding); 6 Tactical, video and match analysis; 7 Physical performance and sports science data; 8 Recruitment and data science (including leagues with little or no data); 9 Other analysis work (academy, goalkeeping, refereeing, federation, business and media, tagging, research); 10 Working with people (including keeping players' data safe); 11 Results and impact; 12 Evidence and portfolio (work samples, with permission to show); 13 What you are looking for; 14 References; 15 Consent and declaration. An analyst completes the sections that fit their work.
+- **Assessment form:** built on the structure of the Coach assessment form v5.1, with analyst content: work-sample evidence and an optional test task (section 5), video and tactical ratings (7), data, recruitment and technical ratings (8), physical performance data (9), communication and adaptability ratings (10), decisions for players and families, for organisations hiring, and for agencies placing (14).
+- **Both forms** save a draft on the phone, have Review, Copy text, Save as PDF and Clear saved answers, and read with scripts off (with the same notice as the coach forms). Save as PDF names the file `Analyst CV - <name>.pdf` or `Analyst Assessment - <name>.pdf` from "Analyst full name" on the cover.
+- **Published Analyst CV layout:** `analysts/sample-layout/index.html`, based on the player and coach profile. Tabs: Profile, How they work, Impact, Career, Work samples, Contact; views for clubs and federations, schools and academies, players and families. Every line is marked placeholder; not linked from any page; asks search engines not to list it. To publish an analyst, copy it to `analysts/<slug>/`, replace every placeholder with the analyst's own answers, remove the sample banner and the noindex line, and add the analyst's card to `analysts/index.html`.
+
+Open flags for analysts:
+1. What an assessor gets back after sending the assessment form is not yet stated beyond "Afritech Sports reviews it" (same as coaches).
+2. French, Portuguese (BR) and Spanish (LATAM) versions wait until the questions are settled.
+3. The dashboard skill builds player profiles only. Analyst CVs are built by hand from the sample layout.
+4. Analyst share card, card and PDF CV are not designed yet.
+5. Work samples often belong to a club. The form asks the analyst to share only what they have permission to share; Afritech checks this before anything is shown publicly.
