@@ -1,0 +1,29 @@
+name: Languages check
+# Stops a pull request if any CV Desk page shows English in French, Portuguese (BR) or Kiswahili,
+# or if a page is wider than a 390 px phone. Same rule as the Tournament Desk's missing-<lang>.txt.
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  languages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install beautifulsoup4 playwright pikepdf reportlab
+      - run: python -m playwright install --with-deps chromium
+      - name: Build all four languages (stops on a missing translation)
+        run: python tools/build.py
+      - name: Pages in the pull request match the build
+        run: git diff --exit-code -- . ':(exclude)forms/*-sw.pdf' || (echo "Run python3 tools/build.py and commit the result." && exit 1)
+      - name: No English on any translated page at 390 px
+        run: python tools/check_lang.py
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: missing-translations
+          path: i18n/missing-*.txt
+          if-no-files-found: ignore
