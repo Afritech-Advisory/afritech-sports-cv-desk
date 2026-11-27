@@ -7,7 +7,8 @@ text a reader can see, and flags:
 - any text that is an English text from the source pages and has no translation (names, the email
   address and the phone number in i18n/keep.txt are allowed);
 - any text that reads as English sentences (two or more common English words);
-- a page wider than the phone screen (sideways scrolling).
+- a page wider than the phone screen (sideways scrolling);
+- the same for the notice shown to readers whose browser has scripts switched off.
 Anything found is written to i18n/missing-<lang>.txt and the check fails, like the build.
 Needs Playwright with Chromium:  pip install playwright && python -m playwright install chromium
 """
@@ -109,6 +110,14 @@ def main():
                         texts.update(pg.evaluate(COLLECT))
                     except Exception:
                         pass
+            # what a reader with scripts switched off sees
+            for ns in re.findall(r"<noscript>(.*?)</noscript>", f.read_text(encoding="utf-8"), flags=re.S):
+                ns = re.sub(r"<style[^>]*>.*?</style>", "", ns, flags=re.S)
+                ns = re.sub(r'<span class="L" data-l="(?!' + c + r')[a-z]+"[^>]*>.*?</span>', "", ns, flags=re.S)
+                for part in re.split(r"<[^>]+>", ns):
+                    t = i18n.norm(part)
+                    if t and i18n.needs(t):
+                        texts.add(t)
             wide = pg.evaluate("() => document.documentElement.scrollWidth - window.innerWidth")
             if wide > 1:
                 found[c].append(f"{page} | wider than a 390 px phone by {wide} px")
