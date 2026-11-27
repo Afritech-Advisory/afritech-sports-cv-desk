@@ -78,7 +78,7 @@ def skip(node):
     for p in node.parents:
         if p is None or p.name is None:
             continue
-        if p.name in ("script", "style", "noscript", "title"):
+        if p.name in ("script", "style", "title"):
             return True
         if p.get("translate") == "no":
             return True
